@@ -13,6 +13,10 @@ public class DVDLogo : MonoBehaviour
     //Current direction
     private Vector3 direction;
 
+
+    //Sound effect
+    public AudioSource RowletCry;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +31,7 @@ public class DVDLogo : MonoBehaviour
         direction.x+= Random.Range(-0.1f,0.1f);
         direction.y+= Random.Range(-0.1f,0.1f);
         direction.Normalize();
+        RowletCry.Play();
     }
 
     private void FlipDirectionY(){
@@ -34,6 +39,7 @@ public class DVDLogo : MonoBehaviour
         direction.x+= Random.Range(-0.1f,0.1f);
         direction.y+= Random.Range(-0.1f,0.1f);
         direction.Normalize();
+        RowletCry.Play();
     }
 
     // Update is called once per frame
